@@ -90,8 +90,8 @@ int pysqlite_connection_init(pysqlite_Connection* self, PyObject* args, PyObject
     int cached_statements = 100;
     int uri = 0;
     double timeout = 5.0;
-    const char *key;
-    Py_ssize_t keyLen;
+    const char *key = NULL;
+    Py_ssize_t keyLen = 0;
     int rc;
 
     if (!PyArg_ParseTupleAndKeywords(args, kwargs, "s|diOiOipz#", kwlist,

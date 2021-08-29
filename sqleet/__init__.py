@@ -25,4 +25,4 @@
 
 from sqleet.dbapi2 import *
 
-__version__ = "031.1.2"
+__version__ = "031.1.3"
