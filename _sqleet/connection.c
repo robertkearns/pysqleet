@@ -1623,6 +1623,7 @@ pysqlite_connection_exit(pysqlite_Connection* self, PyObject* args)
 static int
 pysqleet_set_key(sqlite3* db, const char *key, Py_ssize_t keyLen)
 {
+    keyLen = key ? keyLen : 0;
     int rc = sqlite3_key(db, key, sizeof(char) * keyLen);
     // The auth error does not get picked up by _pysqlite_seterror so check it here
     if (rc == SQLITE_AUTH) {
@@ -1657,6 +1658,7 @@ pysqleet_change_key(pysqlite_Connection* self, PyObject* args)
         return NULL;
     }
 
+    keyLen = key ? keyLen : 0;
     int rc = sqlite3_rekey(self->db, key, sizeof(char) * keyLen);
     if (rc != SQLITE_OK) {
         _pysqlite_seterror(self->db, NULL);
