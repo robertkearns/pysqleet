@@ -25,5 +25,4 @@
 
 from sqleet.dbapi2 import *
 
-# Version follows sqleet version in source
-__version__ = "0.31.1"
+__version__ = "031.1.1"

@@ -41,9 +41,9 @@ con.close()
 ```
 
 # Versioning
-The version (```sqleet.__version__```) matches the sqleet version used in the sources. See the 
-[sqleet version doc](https://github.com/resilar/sqleet/tree/126faf8da913d90c3811d06b553088cc0e32584c#versioning-scheme) 
-for what this means.
+The versions (```sqleet.__version__```) first 2 places (major, minor) match the sqleet version used in the sources.
+For example an sqleet version of 1.2.3 would have pysqleet version of 12.3. The last place (patch) is used
+internally for pysqleet patches.
 
 # Sources
 Pysqleet mixes source code from the below sources, with any modifications being noted in the copyright header
